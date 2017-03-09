@@ -1,0 +1,42 @@
+﻿@model Learn2Learn.Models.Results
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Results</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AuditoryResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AuditoryResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VisualResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VisualResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KinestheticResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KinestheticResult)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
