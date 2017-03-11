@@ -13,7 +13,13 @@ namespace Learn2Learn.Controllers
     public class ResultsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        //Passing by Typed Arguments Code
+        [HttpPost]
+        public ActionResult Index(int visual, int auditory, int kin)
+        {
+            var model = _computerMapper.Compute(visual, auditory, kin);
+            return View(model);
+        }
         // GET: Results
         public ActionResult Index()
         {

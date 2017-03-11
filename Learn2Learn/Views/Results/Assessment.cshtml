@@ -324,8 +324,15 @@
         <label for="q-20k">take the computer apart and try to figure it out for yourself</label>
     </p>
 </div>
-<!--<form></form>-->
 <br />
 <!--<input type="button" id='prev' value="Prev" />-->
 <input type="button" id='next' value="Next" />
+
+@using (@Html.BeginForm("Index", "Results", FormMethod.Post))
+{
+    <input type="hidden" id="Visual" name="Visual"/>
+    <input type="hidden" id="Auditory" name="Auditory"/>
+    <input type="hidden" id="Kinetic" name="Kinetic"/>
+}
+
 
