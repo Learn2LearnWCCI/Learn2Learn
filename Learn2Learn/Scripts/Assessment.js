@@ -173,8 +173,6 @@ function initialize() {
             //console.log(assessmentResults.scores);
 
             // store the user's selected radio value
-          
-            
              $("input:radio").each(function () {
                 if ($(this).is(":checked")) {
                     assessmentResults.scores[currentQuestion] = ($(this).val());
