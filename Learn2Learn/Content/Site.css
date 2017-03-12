@@ -32,6 +32,6 @@ color:grey;
 }
 #btnSubmit[disabled]
 {
-    
+        display: none;
 color:grey;
 }

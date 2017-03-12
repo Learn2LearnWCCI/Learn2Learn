@@ -35,7 +35,8 @@ function initialize() {
         $($questions.get(currentQuestion)).fadeOut(function () {
             currentQuestion = currentQuestion + 1;
             if (currentQuestion === totalQuestions) {
-                $("#btnnext").replaceWith("btnSub");
+                $("#btnnext").hide();
+                assessmentResults.enableSubmit();
             } else {
                 $(".next").prop("disabled", true);
                 $($questions.get(currentQuestion)).fadeIn();
@@ -50,4 +51,28 @@ function initialize() {
         console.log(assessmentResults.scores);
     });
 
+};
+assessmentResults.enableSubmit = function () {
+    // enable submit button
+    $(".btnSub").show();
+    $("#btnSubmit").prop("disabled", false);
+    // load values into form's hidden fields
+    var a = 0, k = 0, v = 0;
+    $("#btnSubmit").submit(function(event) {
+        for (var i = 0; i <= totalQuestions; ++i) {
+            if (assessmentResults.scores[i] === "a") {
+                a++;
+            }
+            if (assessmentResults.scores[i] === "k") {
+                k++;
+            }
+            if (assessmentResults.scores[i] === "v") {
+                v++;
+            }
+        }
+        $("#Auditory").val(a);
+        $("#Kinetic").val(k);
+        $("#Visual").val(v);
+        event.preventDefault();
+    });
 };

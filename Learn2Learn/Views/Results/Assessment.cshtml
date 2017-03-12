@@ -329,23 +329,18 @@
     <br />
     <hr />
     @*<input class="btnNav"  id="btnPrev" type="button" disabled value="Prev"/>*@
-    <input class="next" disabled id="btnprev" type="button" value="Prev" />
+    @*<input class="next" disabled id="btnprev" type="button" value="Prev" />*@
     <input class="next" disabled id="btnnext" type="button" value="Next"/>
 </div>
  <!-- The Submit button-->
-<div>
-    <hr />
     <div class="done">
-        <h3>Thank you for taking our quiz</h3>
-        <input disabled id="btnSubmit" name="btnSub" type="button" value="Submit" />
+        <input disabled id="btnSubmit" class="btnSub" type="button" value="Submit" />
     </div>
-</div>
-
 @using (@Html.BeginForm("Index", "Results", FormMethod.Post))
 {
-    <input type="hidden" name="Visual" value="v" />
-    <input type="hidden"  name="Auditory" value="a"/>
-    <input type="hidden"  name="Kinetic" value="k"/>
+    <input type="number" name="Visual" value="" />
+    <input type="number"  name="Auditory" value=""/>
+    <input type="number"  name="Kinetic" value=""/>
 }
 
 
