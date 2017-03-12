@@ -22,3 +22,16 @@ select,
 textarea {
     max-width: 280px;
 }
+.questions {
+    display: none;
+}
+.next[disabled]
+{
+    
+color:grey;
+}
+#btnSubmit[disabled]
+{
+    
+color:grey;
+}
