@@ -54,9 +54,10 @@ namespace Learn2Learn
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "614353198764569",
+
+               appSecret: "0341b5d60c02655c25e37591e706c89e");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
