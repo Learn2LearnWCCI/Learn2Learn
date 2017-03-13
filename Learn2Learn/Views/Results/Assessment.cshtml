@@ -1,4 +1,4 @@
-﻿
+﻿@model Learn2Learn.Models.Results
 @{
     ViewBag.Title = "Assessment";
 }
@@ -330,17 +330,33 @@
     <hr />
     @*<input class="btnNav"  id="btnPrev" type="button" disabled value="Prev"/>*@
     @*<input class="next" disabled id="btnprev" type="button" value="Prev" />*@
-    <input class="next" disabled id="btnnext" type="button" value="Next"/>
+    <input class="next" disabled id="btnnext" type="button" value="Next" />
 </div>
- <!-- The Submit button-->
-    <div class="done">
-        <input disabled id="btnSubmit" class="btnSub" type="button" value="Submit" />
-    </div>
-@using (@Html.BeginForm("Index", "Results", FormMethod.Post))
+<!-- The Submit button-->
+
+@using (Html.BeginForm())
 {
-    <input type="number" name="Visual" value="" />
-    <input type="number"  name="Auditory" value=""/>
-    <input type="number"  name="Kinetic" value=""/>
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="number" id="Visual" value="" />
+            <input type="number" id="Auditory" value="" />
+            <input type="number" id="Kinetic" value="" />
+            <input type="submit" id="btnSubmit" value="Submit" class="btn btn-default" />
+        </div>
+    </div>
 }
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
 
 

@@ -54,25 +54,33 @@ function initialize() {
 };
 assessmentResults.enableSubmit = function () {
     // enable submit button
-    $(".btnSub").show();
+    $(".btn").show();
     $("#btnSubmit").prop("disabled", false);
     // load values into form's hidden fields
-    var a = 0, k = 0, v = 0;
-    $("#btnSubmit").submit(function(event) {
-        for (var i = 0; i <= totalQuestions; ++i) {
-            if (assessmentResults.scores[i] === "a") {
-                a++;
-            }
-            if (assessmentResults.scores[i] === "k") {
-                k++;
-            }
-            if (assessmentResults.scores[i] === "v") {
-                v++;
-            }
-        }
+    var a = 0;
+    var k = 0;
+    var v = 0;
+    $("#btnSubmit").click(function () {
+        //event.preventDefault();
+        $.each(assessmentResults.scores,
+            function(index, value) {
+                if (value === "a") {
+                    a++;
+                }
+                if (value === "k") {
+                    k++;
+                }
+                if (value === "v") {
+                    v++;
+                }
+            });
         $("#Auditory").val(a);
         $("#Kinetic").val(k);
         $("#Visual").val(v);
-        event.preventDefault();
+
+        console.log("");
+        console.log("Visual = " + v);
+        console.log("Auditory = " + a);
+        console.log("kinesthetic = " + k);
     });
 };
