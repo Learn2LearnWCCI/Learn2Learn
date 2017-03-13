@@ -56,8 +56,8 @@ function initialize() {
 };
 assessmentResults.enableSubmit = function () {
     // enable submit button
-    $(".btnSub").show();
-    $(".btnSub").prop("disabled", false);
+    $("#btnSubmit").show();
+    $("#btnSubmit").prop("disabled", false);
     //load values into form's hidden fields
     var a = 0, k = 0, v = 0;
     //$(".btnSub").submit(function (event) {
@@ -77,13 +77,9 @@ assessmentResults.enableSubmit = function () {
     $("#Visual").val(v);
     //event.preventDefault();
 
-    console.log("");
-    console.log("Visual = " + v);
-    console.log("Auditory = " + a);
-    console.log("kinesthetic = " + k);
 
-    //document.getElementById("visualResult").innerHTML = v;
-    //document.getElementById("auditoryResult").innerHTML = a;
-    //document.getElementById("kineticResult").innerHTML = k;
-    //});
+    document.getElementById("visualResult").value = v;
+    document.getElementById("auditoryResult").value = a;
+    document.getElementById("kinestheticResult").value = k;
+    
 };
