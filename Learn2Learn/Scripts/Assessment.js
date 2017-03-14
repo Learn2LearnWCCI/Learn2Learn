@@ -54,13 +54,13 @@ function initialize() {
 };
 assessmentResults.enableSubmit = function () {
     // enable submit button
-    $(".btn").show();
-    $("#btnSubmit").prop("disabled", false);
+    $("#btnSubmit").show();
+    //$("#btnSubmit").prop("disabled", false);
     // load values into form's hidden fields
     var a = 0;
     var k = 0;
     var v = 0;
-    $("#btnSubmit").click(function () {
+    //$("#btnSubmit").submit(function () {
         //event.preventDefault();
         $.each(assessmentResults.scores,
             function(index, value) {
@@ -74,13 +74,7 @@ assessmentResults.enableSubmit = function () {
                     v++;
                 }
             });
-        $("#Auditory").val(a);
-        $("#Kinetic").val(k);
-        $("#Visual").val(v);
-
-        console.log("");
-        console.log("Visual = " + v);
-        console.log("Auditory = " + a);
-        console.log("kinesthetic = " + k);
-    });
-};
+        $("#auditoryResult").val(a);
+        $("#kinestheticResult").val(k);
+        $("#visualResult").val(v);
+    };

@@ -23,14 +23,14 @@ textarea {
     max-width: 280px;
 }
 
-.questions /*.form-horizontal*/ {
+.questions .form-group {
     display: none;
 }
 .next[disabled]
 {
 color:grey;
 }
-.btn
+.next, #btnSubmit
 {
 display: none;
 color:grey;

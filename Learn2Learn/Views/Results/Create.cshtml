@@ -339,7 +339,7 @@
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Results</h4>
         <hr />
@@ -347,7 +347,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.AuditoryResult, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.AuditoryResult, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.AuditoryResult, new { htmlAttributes = new { @class = "form-control", id = "auditoryResult" } })
                 @Html.ValidationMessageFor(model => model.AuditoryResult, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -355,7 +355,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.VisualResult, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.VisualResult, new { htmlAttributes = new { @class = "form -control" } })
+                @Html.EditorFor(model => model.VisualResult, new { htmlAttributes = new { @class = "form -control", id = "visualResult" } })
                 @Html.ValidationMessageFor(model => model.VisualResult, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -363,14 +363,14 @@
         <div class="form-group">
             @Html.LabelFor(model => model.KinestheticResult, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.KinestheticResult, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.KinestheticResult, new { htmlAttributes = new { @class = "form-control", id = "kinestheticResult" } })
                 @Html.ValidationMessageFor(model => model.KinestheticResult, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input disabled type="submit" value="Submit" class="btn btn-default" />
+                <input type="submit" id="btnSubmit" value="Submit Quiz" class="btn btn-default" />
             </div>
         </div>
     </div>
