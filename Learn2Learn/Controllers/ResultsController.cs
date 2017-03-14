@@ -26,11 +26,6 @@ namespace Learn2Learn.Controllers
             return View(db.Results.ToList());
         }
 
-        public ActionResult Assessment()
-        {
-            return View();
-        }
-
         // GET: Results/Details/5
         public ActionResult Details(int? id)
         {

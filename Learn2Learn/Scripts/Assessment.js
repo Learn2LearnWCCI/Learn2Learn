@@ -61,20 +61,20 @@ assessmentResults.enableSubmit = function () {
     var k = 0;
     var v = 0;
     //$("#btnSubmit").submit(function () {
-        //event.preventDefault();
-        $.each(assessmentResults.scores,
-            function(index, value) {
-                if (value === "a") {
-                    a++;
-                }
-                if (value === "k") {
-                    k++;
-                }
-                if (value === "v") {
-                    v++;
-                }
-            });
-        $("#auditoryResult").val(a);
-        $("#kinestheticResult").val(k);
-        $("#visualResult").val(v);
-    };
+    //event.preventDefault();
+    $.each(assessmentResults.scores,
+        function (index, value) {
+            if (value === "a") {
+                a++;
+            }
+            if (value === "k") {
+                k++;
+            }
+            if (value === "v") {
+                v++;
+            }
+        });
+    $("#auditoryResult").val(a);
+    $("#kinestheticResult").val(k);
+    $("#visualResult").val(v);
+};

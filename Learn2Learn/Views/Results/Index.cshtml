@@ -8,37 +8,58 @@
 <p>
     @Html.ActionLink("Take Asessment Again", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.AuditoryResult)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.VisualResult)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.KinestheticResult)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AuditoryResult)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.VisualResult)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.KinestheticResult)
-        </td>
-        <td>
-            @*@Html.ActionLink("Edit", "Edit", new { id=item.ID }) | not allowing edit*@
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) 
-            @*@Html.ActionLink("Delete", "Delete", new { id=item.ID }) not allowing delete*@
-        </td>
-    </tr>
-}
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="row results">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
-</table>
+                @Html.DisplayNameFor(model => model.AuditoryResult): @Html.DisplayFor(modelItem => item.AuditoryResult)<br />
+
+                @Html.DisplayNameFor(model => model.VisualResult): @Html.DisplayFor(modelItem => item.VisualResult)<br />
+
+                @Html.DisplayNameFor(model => model.KinestheticResult): @Html.DisplayFor(modelItem => item.KinestheticResult)<br />
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.ID }) | not allowing edit*@
+                @Html.ActionLink("Details", "Details", new { id = item.ID })
+                @*@Html.ActionLink("Delete", "Delete", new { id=item.ID }) not allowing delete*@
+            </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h3>Primarily Auditory</h3>
+                    Your primary learning perference is visual!
+                    So what does this mean?
+                    Summary: A visual learner needs to see body language and facial
+                    expressions of the teacher in order to understand the content.
+                    Visual learners may think of thinks in terms of pictures and learn best
+                    from visual displays such as diagrams. Details notes tend to help visual learns absorb information.
+
+                    You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h3>Primarily Visual</h3>
+                    Your primary learning perference is visual!
+                    So what does this mean?
+                    Summary: A visual learner needs to see body language and facial
+                    expressions of the teacher in order to understand the content.
+                    Visual learners may think of thinks in terms of pictures and learn best
+                    from visual displays such as diagrams. Details notes tend to help visual learns absorb information.
+
+                    You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <h3>Primarily Kinesthetic</h3>
+                    Your primary learning perference is visual!
+                    So what does this mean?
+                    Summary: A visual learner needs to see body language and facial
+                    expressions of the teacher in order to understand the content.
+                    Visual learners may think of thinks in terms of pictures and learn best
+                    from visual displays such as diagrams. Details notes tend to help visual learns absorb information.
+
+                    You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.
+                </div>
+            </div>
+
+    }
+</div>
+
+
