@@ -5,11 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Learn2Learn", "Learn2Learn\Learn2Learn.csproj", "{4F41D707-F54D-4F52-9619-23F48E52411A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F4EA098-34BD-4313-AC93-9B4B6AA4BEFD}"
-	ProjectSection(SolutionItems) = preProject
-		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -17,7 +17,10 @@ namespace Learn2Learn.Models
     
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6de9dc8a8147b6d383b2334c18c5330e13de6743
 
         public virtual ApplicationUser ApplicationUser { get; set; }
 
