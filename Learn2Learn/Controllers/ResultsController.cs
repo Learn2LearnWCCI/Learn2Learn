@@ -37,6 +37,7 @@ namespace Learn2Learn.Controllers
         }
 
         // GET: Results/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
