@@ -15,6 +15,7 @@ namespace Learn2Learn.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Results
+        [Authorize] //view profile
         public ActionResult Index()
         {
     
@@ -37,6 +38,7 @@ namespace Learn2Learn.Controllers
         }
 
         // GET: Results/Create
+        [Authorize] //take assessment
         public ActionResult Create()
         {
             return View();
