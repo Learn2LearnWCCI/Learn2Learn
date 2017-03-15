@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201703150006035_JustDate.Designer.cs">
       <DependentUpon>201703150006035_JustDate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703151429526_CommentOutICollectionClass.cs" />
+    <Compile Include="Migrations\201703151429526_CommentOutICollectionClass.Designer.cs">
+      <DependentUpon>201703151429526_CommentOutICollectionClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -331,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703150006035_JustDate.resx">
       <DependentUpon>201703150006035_JustDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703151429526_CommentOutICollectionClass.resx">
+      <DependentUpon>201703151429526_CommentOutICollectionClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -15,10 +15,12 @@ namespace Learn2Learn.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Results
+        [Authorize]
         public ActionResult Index()
         {
-    
-            return View(db.Results.Include(q=> q.ApplicationUser).ToList());
+            var results = db.Results.ToList();
+            var author = results[0].ApplicationUser;
+            return View(author);
         }
 
         // GET: Results/Details/5
