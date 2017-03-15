@@ -51,15 +51,18 @@ function initialize() {
         console.log(assessmentResults.scores);
     });
 
+    //display results for results summarys depending on highest value
+    summary();
 };
+var a = 0;
+var k = 0;
+var v = 0;
 assessmentResults.enableSubmit = function () {
     // enable submit button
     $("#btnSubmit").show();
     //$("#btnSubmit").prop("disabled", false);
     // load values into form's hidden fields
-    var a = 0;
-    var k = 0;
-    var v = 0;
+
     //$("#btnSubmit").submit(function () {
     //event.preventDefault();
     $.each(assessmentResults.scores,
@@ -78,3 +81,23 @@ assessmentResults.enableSubmit = function () {
     $("#kinestheticResult").val(k);
     $("#visualResult").val(v);
 };
+
+function summary() {
+    var learningStyle = "";
+        if (v > a && v > k) {
+            learningStyle = "Visual";
+        } else if (a > k) {
+            learningStyle = "Auditory";
+        } else {
+            learningStyle = "Kinesthetic";
+        }
+        if (learningStyle === "Visual") {
+            $("#vissummary").show();
+        }
+        if (learningStyle === "Auditory") {
+            $("#audsummary").show();
+        }
+        if (learningStyle === "Kinesthetic") {
+            $("#kinsummary").show();
+        }
+    };

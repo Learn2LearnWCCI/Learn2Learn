@@ -211,6 +211,14 @@
     <Compile Include="Migrations\201703131838089_NewChanges.Designer.cs">
       <DependentUpon>201703131838089_NewChanges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703142354576_DateTime.cs" />
+    <Compile Include="Migrations\201703142354576_DateTime.Designer.cs">
+      <DependentUpon>201703142354576_DateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703150006035_JustDate.cs" />
+    <Compile Include="Migrations\201703150006035_JustDate.Designer.cs">
+      <DependentUpon>201703150006035_JustDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -298,6 +306,9 @@
     <Content Include="Views\Results\Edit.cshtml" />
     <Content Include="Views\Results\Index.cshtml" />
     <Content Include="Views\Home\Resources.cshtml" />
+    <Content Include="Views\Home\VisualPortal.cshtml" />
+    <Content Include="Views\Home\AuditoryPortal.cshtml" />
+    <Content Include="Views\Home\KinPortal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -314,6 +325,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703131838089_NewChanges.resx">
       <DependentUpon>201703131838089_NewChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142354576_DateTime.resx">
+      <DependentUpon>201703142354576_DateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703150006035_JustDate.resx">
+      <DependentUpon>201703150006035_JustDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

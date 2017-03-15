@@ -12,6 +12,18 @@ namespace Learn2Learn.Controllers
         {
             return View();
         }
+        public ActionResult AuditoryPortal()
+        {
+            return View();
+        }
+        public ActionResult KinPortal()
+        {
+            return View();
+        }
+        public ActionResult VisualPortal()
+        {
+            return View();
+        }
         public ActionResult Resources()
         {
             return View();

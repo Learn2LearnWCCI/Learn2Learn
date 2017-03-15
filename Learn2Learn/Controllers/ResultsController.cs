@@ -13,17 +13,12 @@ namespace Learn2Learn.Controllers
     public class ResultsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        //Passing by Typed Arguments Code
-        //[HttpPost]
-        //public ActionResult Index(int visual, int auditory, int kin)
-        //{
-        //    var model = _computerMapper.Compute(visual, auditory, kin);
-        //    return View(model);
-        //}
+
         // GET: Results
         public ActionResult Index()
         {
-            return View(db.Results.ToList());
+    
+            return View(db.Results.Include(q=> q.ApplicationUser).ToList());
         }
 
         // GET: Results/Details/5
@@ -52,10 +47,11 @@ namespace Learn2Learn.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,AuditoryResult,VisualResult,KinestheticResult")] Results results)
+        public ActionResult Create([Bind(Include = "ID,AuditoryResult,VisualResult,KinestheticResult,Date,ApplicationUser")] Results results)
         {
             if (ModelState.IsValid)
             {
+              
                 db.Results.Add(results);
                 db.SaveChanges();
                 return RedirectToAction("Index");
