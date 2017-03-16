@@ -18,8 +18,7 @@ namespace Learn2Learn.Models
         public DateTime Date { get; set; }
 
         public virtual ApplicationUser ApplicationUser { get; set; }
-
-
+        //public string UserVAK { get; set; }
 
     }
 }

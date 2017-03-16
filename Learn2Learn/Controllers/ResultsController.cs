@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Learn2Learn.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Learn2Learn.Controllers
 {
@@ -49,6 +50,8 @@ namespace Learn2Learn.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,AuditoryResult,VisualResult,KinestheticResult,Date,ApplicationUser")] Results results)
         {
+            //results.ApplicationUser.Email = User.Identity.GetUserName();
+
             if (ModelState.IsValid)
             {
               

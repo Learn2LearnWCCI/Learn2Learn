@@ -86,7 +86,7 @@
     </p>
 </div>
 
-<div class="questions" id="5">
+@*<div class="questions" id="5">
     <h4>6. If I had to remember a list of items, I would remember it best if: </h4>
     <p>
         <input id="q-6v" name="q-6" type="radio" value="v" />
@@ -324,7 +324,7 @@
         <input id="q-20k" name="q-20" type="radio" value="k" />
         <label for="q-20k">take the computer apart and try to figure it out for yourself</label>
     </p>
-</div>
+</div>*@
 <!-- The Next/Prev buttons-->
 <div>
     <br />
@@ -366,7 +366,7 @@
                 @Html.EditorFor(model => model.KinestheticResult, new { htmlAttributes = new { @class = "form-control", id = "kinestheticResult" } })
                 @Html.ValidationMessageFor(model => model.KinestheticResult, "", new { @class = "text-danger" })
                 @Html.TextBoxFor(x => x.Date, new { @Value = @DateTime.Now.ToShortDateString() })
-                @Html.TextBoxFor(x => x.ApplicationUser, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.TextBoxFor(x => x.ApplicationUser, new { htmlAttributes = new { @class = "form-control" } })*@
             </div>
         </div>
     </div>

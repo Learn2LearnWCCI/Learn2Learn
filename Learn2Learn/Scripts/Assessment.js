@@ -80,24 +80,38 @@ assessmentResults.enableSubmit = function () {
     $("#auditoryResult").val(a);
     $("#kinestheticResult").val(k);
     $("#visualResult").val(v);
+
+    console.log("v = " + v);
+    console.log("a = " + a);
+    console.log("k = " + k);
 };
 
 function summary() {
-    var learningStyle = "";
+    var learningStyle;
+    var summaries;
         if (v > a && v > k) {
             learningStyle = "Visual";
+            summaries = $("#vissummary").show();
         } else if (a > k) {
             learningStyle = "Auditory";
+            summaries = $("#audsummary").show();
         } else {
             learningStyle = "Kinesthetic";
+            summaries = $("#kinsummary").show();
         }
-        if (learningStyle === "Visual") {
-            $("#vissummary").show();
-        }
-        if (learningStyle === "Auditory") {
-            $("#audsummary").show();
-        }
-        if (learningStyle === "Kinesthetic") {
-            $("#kinsummary").show();
-        }
+        
+        console.log("v = " + v);
+        console.log("a = " + a);
+        console.log("k = " + k);
+        console.log(summaries);
+
+        //if (learningStyle === "Visual") {
+        //    $("#vissummary").show();
+        //}
+        //if (learningStyle === "Auditory") {
+        //    $("#audsummary").show();
+        //}
+        //if (learningStyle === "Kinesthetic") {
+        //    $("#kinsummary").show();
+        //}
     };
