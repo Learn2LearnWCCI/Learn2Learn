@@ -80,38 +80,41 @@ assessmentResults.enableSubmit = function () {
     $("#auditoryResult").val(a);
     $("#kinestheticResult").val(k);
     $("#visualResult").val(v);
-
-    console.log("v = " + v);
-    console.log("a = " + a);
-    console.log("k = " + k);
 };
 
 function summary() {
     var learningStyle;
     var summaries;
-        if (v > a && v > k) {
-            learningStyle = "Visual";
-            summaries = $("#vissummary").show();
-        } else if (a > k) {
-            learningStyle = "Auditory";
-            summaries = $("#audsummary").show();
-        } else {
-            learningStyle = "Kinesthetic";
-            summaries = $("#kinsummary").show();
-        }
-        
-        console.log("v = " + v);
-        console.log("a = " + a);
-        console.log("k = " + k);
-        console.log(summaries);
+    if (v > a && v > k) {
+        learningStyle = "Visual";
+        summaries = $("#vissummary").show();
+    } else if (a > k) {
+        learningStyle = "Auditory";
+        summaries = $("#audsummary").show();
+    } else {
+        learningStyle = "Kinesthetic";
+        summaries = $("#kinsummary").show();
+    }
 
-        //if (learningStyle === "Visual") {
-        //    $("#vissummary").show();
-        //}
-        //if (learningStyle === "Auditory") {
-        //    $("#audsummary").show();
-        //}
-        //if (learningStyle === "Kinesthetic") {
-        //    $("#kinsummary").show();
-        //}
+};
+
+google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Styles', 'Score'],
+      ['Visual', 11],
+      ['Auditory', 12],
+      ['Kinesthetic', 7]
+    ]);
+
+    var options = {
+        title: 'My Learning Style'
     };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+}
