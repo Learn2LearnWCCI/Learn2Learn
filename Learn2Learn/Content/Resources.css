@@ -1,0 +1,17 @@
+﻿body {
+
+}
+
+.threeTypeHolder{
+    position:absolute;
+    left:500px
+}
+.visualButton{
+    position:absolute;
+    top:175px;
+    left:675px;
+}
+#invisableButton{
+    background-color:transparent;
+    color:transparent;
+}
