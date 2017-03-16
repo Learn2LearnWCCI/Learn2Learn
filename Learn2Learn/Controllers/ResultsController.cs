@@ -53,6 +53,7 @@ namespace Learn2Learn.Controllers
             {
               
                 db.Results.Add(results);
+                //results.applicationUser.id for example
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
