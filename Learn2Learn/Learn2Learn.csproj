@@ -223,6 +223,10 @@
     <Compile Include="Migrations\201703151429526_CommentOutICollectionClass.Designer.cs">
       <DependentUpon>201703151429526_CommentOutICollectionClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703151535425_UserId.cs" />
+    <Compile Include="Migrations\201703151535425_UserId.Designer.cs">
+      <DependentUpon>201703151535425_UserId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -338,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703151429526_CommentOutICollectionClass.resx">
       <DependentUpon>201703151429526_CommentOutICollectionClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703151535425_UserId.resx">
+      <DependentUpon>201703151535425_UserId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

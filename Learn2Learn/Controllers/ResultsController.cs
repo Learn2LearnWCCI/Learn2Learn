@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Learn2Learn.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Learn2Learn.Controllers
 {
@@ -18,9 +19,15 @@ namespace Learn2Learn.Controllers
         [Authorize]
         public ActionResult Index()
         {
-            var results = db.Results.ToList();
-            var author = results[0].ApplicationUser;
-            return View(author);
+            //var userID = User.Identity.GetUserId();
+            //var user = (from u in db.Users
+            //            where u.Id == userID
+            //            select u).FirstOrDefault();
+
+            return View(db.Results.Include(q => q.ApplicationUser).ToList());
+            //var results = db.Results.ToList();
+            //var author = results[0].ApplicationUser;
+            //return View(author);
         }
 
         // GET: Results/Details/5
@@ -44,6 +51,7 @@ namespace Learn2Learn.Controllers
         {
             return View();
         }
+        
 
         // POST: Results/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 

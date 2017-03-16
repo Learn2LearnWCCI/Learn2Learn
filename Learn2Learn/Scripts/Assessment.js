@@ -15,6 +15,9 @@ var currentQuestion = 0;
 
 //Store the selector in a variable
 var $questions = $(".questions");
+var a = 0;
+var k = 0;
+var v = 0;
 
 //Show the first question
 
@@ -52,19 +55,13 @@ function initialize() {
     });
 
     //display results for results summarys depending on highest value
-    summary();
+    //summary();
 };
-var a = 0;
-var k = 0;
-var v = 0;
+
 assessmentResults.enableSubmit = function () {
     // enable submit button
     $("#btnSubmit").show();
-    //$("#btnSubmit").prop("disabled", false);
-    // load values into form's hidden fields
 
-    //$("#btnSubmit").submit(function () {
-    //event.preventDefault();
     $.each(assessmentResults.scores,
         function (index, value) {
             if (value === "a") {
@@ -80,24 +77,35 @@ assessmentResults.enableSubmit = function () {
     $("#auditoryResult").val(a);
     $("#kinestheticResult").val(k);
     $("#visualResult").val(v);
+     alert(a);
+    alert(v);
+    alert(k);
 };
 
-function summary() {
-    var learningStyle = "";
-        if (v > a && v > k) {
-            learningStyle = "Visual";
-        } else if (a > k) {
-            learningStyle = "Auditory";
-        } else {
-            learningStyle = "Kinesthetic";
-        }
-        if (learningStyle === "Visual") {
-            $("#vissummary").show();
-        }
-        if (learningStyle === "Auditory") {
-            $("#audsummary").show();
-        }
-        if (learningStyle === "Kinesthetic") {
-            $("#kinsummary").show();
-        }
-    };
+//function summary() {
+    
+//    alert(a);
+//    alert(v);
+//    alert(k);
+//    $(".results").each(function () {
+//        var learningStyle = "";
+// if (v > a && v > k) {
+//            learningStyle = "Visual";
+//        } else if (a > k) {
+//            learningStyle = "Auditory";
+//            } else {
+//            learningStyle = "Kinesthetic";
+//            }
+
+//        $(".summary").each(function () {
+//            if (learningStyle === "Visual") {
+//                $(".vissummary").show();
+//            }
+//            if (learningStyle === "Auditory") {
+//                $(".audsummary").show();
+//            }
+//            if (learningStyle === "Kinesthetic") {
+//                $(".kinsummary").show();
+//            }
+//        });
+//    });

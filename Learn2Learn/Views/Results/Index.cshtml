@@ -1,5 +1,8 @@
 ﻿@using System.Runtime.InteropServices.ComTypes
+@using Microsoft.AspNet.Identity.EntityFramework
+
 @model IEnumerable<Learn2Learn.Models.Results>
+
 
 @{
     ViewBag.Title = "Results";
@@ -11,65 +14,78 @@
 </p>
 
 <div class="container">
+
     @foreach (var item in Model)
+
     {
         <div class="row results">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
-                @Html.DisplayNameFor(model => model.AuditoryResult): @Html.DisplayFor(modelItem => item.AuditoryResult, new { htmlAttributes = new { id = "kin" } })<br />
+                @Html.DisplayNameFor(model => model.AuditoryResult): @Html.DisplayFor(modelItem => item.AuditoryResult)<br />
 
-                @Html.DisplayNameFor(model => model.VisualResult): @Html.DisplayFor(modelItem => item.VisualResult, new { htmlAttributes = new { id = "vis" } })<br />
 
-                @Html.DisplayNameFor(model => model.KinestheticResult): @Html.DisplayFor(modelItem => item.KinestheticResult, new { htmlAttributes = new { id = "kin" } })<br />
+                @Html.DisplayNameFor(model => model.VisualResult): @Html.DisplayFor(modelItem => item.VisualResult)<br />
+
+                @Html.DisplayNameFor(model => model.KinestheticResult): @Html.DisplayFor(modelItem => item.KinestheticResult)<br />
                 @Html.DisplayNameFor(model => model.Date): @Html.DisplayFor(modelItem => item.Date)<br />
-                @Html.DisplayNameFor(model => model.ApplicationUser): @Html.DisplayFor(modelItem => item.ApplicationUser.UserName)<br />
+                @Html.DisplayNameFor(model => model.ApplicationUser): @Html.DisplayFor(modelItem => item.ApplicationUser)<br />
                 @*@Html.ActionLink("Edit", "Edit", new { id=item.ID }) | not allowing edit*@
                 @Html.ActionLink("Details", "Details", new { id = item.ID })
                 @Html.ActionLink("Delete", "Delete", new { id = item.ID })
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 summary" id="audsummary">
-                <h3>Primarily Auditory</h3>
-                Your primary learning perference is visual!
-                So what does this mean?
-                Summary: An auditory learner uses verbal lessons, conversations, and listening to
-                learn. Things such as tone of voice, speed, and pitch help them interpret and understand
-                information. Written information won't likely be understood until it is heard outloud.
-                Reading outloud and listening to recordings are a good way to learn.
 
-                You probably: Prefer to work in groups, like to discuss ideas, recite information to remember it, repeat back instructions.
+            @{
+                int[] values = { item.AuditoryResult, item.VisualResult, item.KinestheticResult };
+                int maxValue = values.Max();
+                int valueIndex = Array.IndexOf(values, maxValue);
+            }
+            @if (valueIndex == 0)
+            {
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 summary vissummary">
+                    <h3>Primarily Auditory</h3>
+                    Your primary learning perference is visual!
+                    So what does this mean?
+                    Summary: An auditory learner uses verbal lessons, conversations, and listening to
+                    learn. Things such as tone of voice, speed, and pitch help them interpret and underst
+                    information. Written information won't likely be understood until it is heard outloud.
+                    Reading outloud and listening to recordings are a good way to learn.
 
-                You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.
-                @Html.ActionLink("Auditory Portal", "AuditoryPortal", "Home")
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 summary" id="vissummary">
-                <h3>Primarily Visual</h3>
-                Your primary learning perference is visual!
-                So what does this mean?
-                Summary: A visual learner needs to see body language and facial
-                expressions of the teacher in order to understand the content.
-                Visual learners may think of thinks in terms of pictures and learn best
-                from visual displays such as diagrams. Details notes tend to help visual learns absorb information.
+                    You probably: Prefer to work in groups, like to discuss ideas, recite information to remember it, repeat back instructions.
 
-                You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.
-                @Html.ActionLink("Visual Portal", "VisualPortal", "Home")
+                    You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.
+                    @Html.ActionLink("Auditory Portal", "AuditoryPortal", "Home")
+                </div>
+            }
+            @if (valueIndex == 1)
+            {
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 summary vissummary">
+                    <h3>Primarily Visual</h3>
+                    Your primary learning perference is visual!
+                    So what does this mean?
+                    Summary: A visual learner needs to see body language and facial
+                    expressions of the teacher in order to understand the content.
+                    Visual learners may think of thinks in terms of pictures and learn best
+                    from visual displays such as diagrams. Details notes tend to help visual learns absorb information.
 
-
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 summary" id="kinsummary">
-                <h3>Primarily Kinesthetic</h3>
-                Your primary learning perference is visual!
-                So what does this mean?
-                Summary: Kinesthetic learners learn through doing, touching, and movement. A
-                kinesthetic learner will take a hands-on approach, actively exploring the physical world.
-                Kinesthetic learners often have trouble sitting for long periods of time and can become distracted
-                by their need for exploration.
-
-                You probably: Take frequent breaks, prefer to work standing, listen to music while studying, skim material to get a rough idea, and likes to have an object or learning prop.
-                @Html.ActionLink("Kinesthetic Portal", "KinPortal", "Home")
-
-
-            </div>
+                    You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.
+                    @Html.ActionLink("Visual Portal", "VisualPortal", "Home")
+                </div>
+            }
+            @if (valueIndex == 2)
+            {
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 summary kinsummary">
+                    <h3>Primarily Kinesthetic</h3>
+                    Your primary learning perference is visual!
+                    So what does this mean?
+                    Summary: Kinesthetic learners learn through doing, touching, and movement. A
+                    kinesthetic learner will take a hands-on approach, actively exploring the physical world.
+                    Kinesthetic learners often have trouble sitting for long periods of time and can become distracted
+                    by their need for exploration.
+                    You probably: Take frequent breaks, prefer to work standing, listen to music while studying, skim material to get a rough idea, and likes to have an object or learning prop.
+                    @Html.ActionLink("Kinesthetic Portal", "KinPortal", "Home")
+                </div>
+            }
         </div>
 
-    }
+                }
 </div>
