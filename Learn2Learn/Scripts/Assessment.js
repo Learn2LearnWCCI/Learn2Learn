@@ -118,3 +118,75 @@ function drawChart() {
 
     chart.draw(data, options);
 }
+
+$($questions.get(currentQuestion)).fadeOut(function () {
+    currentQuestion = currentQuestion + 1;
+    if (currentQuestion === totalQuestions) {
+        $("#btnnext").hide();
+        assessmentResults.enableSubmit();
+    }
+    else {
+        $(".next").prop("disabled", true);
+        $($questions.get(currentQuestion)).fadeIn();
+
+    }
+});
+//if ($(".next").is("#btnprev")) {
+//    currentQuestion = currentQuestion - 1;
+//        $(".next").prop("disabled", true);
+//        $($questions.get(currentQuestion)).fadeIn();
+//    }
+// log to console what we've got so far
+console.log(assessmentResults.scores.join());
+
+
+assessmentResults.enableSubmit = function () {
+    // enable submit button
+    $("#btnSubmit").show();
+    $("#btnSubmit").prop("disabled", false);
+    //load values into form's hidden fields
+    var a = 0, k = 0, v = 0;
+    //$(".btnSub").submit(function (event) {
+    for (var i = 0; i <= totalQuestions; ++i) {
+        if (assessmentResults.scores[i] === "a") {
+            a++;
+        }
+        if (assessmentResults.scores[i] === "k") {
+            k++;
+        }
+        if (assessmentResults.scores[i] === "v") {
+            v++;
+        }
+    }
+    $("#Auditory").val(a);
+    $("#Kinetic").val(k);
+    $("#Visual").val(v);
+    //event.preventDefault();
+
+
+    document.getElementById("visualResult").value = v;
+    document.getElementById("auditoryResult").value = a;
+    document.getElementById("kinestheticResult").value = k;
+    
+};
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+        ['Styles', 'Scores'],
+        ['Visual', 14],
+        ['Auditory', 6],
+        ['kinesthetic', 10]
+    ]);
+
+    var options = {
+        title: 'My Daily Activities'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+};
