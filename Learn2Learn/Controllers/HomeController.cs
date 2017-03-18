@@ -8,8 +8,10 @@ namespace Learn2Learn.Controllers
 {
     public class HomeController : Controller
     {
+        [Authorize]
         public ActionResult Index()
         {
+            //display results where application user = logged in user
             return View();
         }
         public ActionResult AuditoryPortal()

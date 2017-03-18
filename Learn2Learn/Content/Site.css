@@ -38,4 +38,11 @@ color:grey;
 .show {
     display: contents;
 }
-
+.results {
+    width: auto;
+    
+}
+.summary {
+    display: block;
+    text-align: center;
+}

@@ -77,35 +77,29 @@ assessmentResults.enableSubmit = function () {
     $("#auditoryResult").val(a);
     $("#kinestheticResult").val(k);
     $("#visualResult").val(v);
-     alert(a);
+    alert(a);
     alert(v);
     alert(k);
 };
 
-//function summary() {
-    
-//    alert(a);
-//    alert(v);
-//    alert(k);
-//    $(".results").each(function () {
-//        var learningStyle = "";
-// if (v > a && v > k) {
-//            learningStyle = "Visual";
-//        } else if (a > k) {
-//            learningStyle = "Auditory";
-//            } else {
-//            learningStyle = "Kinesthetic";
-//            }
+google.charts.load('current', { 'packages': ['corechart'] });
+google.charts.setOnLoadCallback(drawChart);
 
-//        $(".summary").each(function () {
-//            if (learningStyle === "Visual") {
-//                $(".vissummary").show();
-//            }
-//            if (learningStyle === "Auditory") {
-//                $(".audsummary").show();
-//            }
-//            if (learningStyle === "Kinesthetic") {
-//                $(".kinsummary").show();
-//            }
-//        });
-//    });
+function drawChart() {
+    $(".row").each(function () {
+        var data = google.visualization.arrayToDataTable([
+            ['Styles', 'Scores'],
+            ['Visual', parseInt($(this).find('input[name="item.VisualResult"]').val())],
+            ['Auditory', parseInt($(this).find('input[name="item.AuditoryResult"]').val())],
+            ['Kinesthetic', parseInt($(this).find('input[name="item.KinestheticResult"]').val())]
+        ]);
+
+        var options = {
+            title: 'Assessment Results'
+        };
+
+        var chart = new google.visualization.PieChart($(this).find('.piechart')[0]);
+
+        chart.draw(data, options);
+    });
+};
