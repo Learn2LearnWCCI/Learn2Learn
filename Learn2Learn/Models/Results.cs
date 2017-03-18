@@ -18,6 +18,9 @@ namespace Learn2Learn.Models
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
 
+        [ForeignKey("ApplicationUser")]
+        public string UserId { get; set; }
+        //navigation property- how to access related author in code
         public virtual ApplicationUser ApplicationUser { get; set; }
 
 

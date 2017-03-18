@@ -219,6 +219,22 @@
     <Compile Include="Migrations\201703150006035_JustDate.Designer.cs">
       <DependentUpon>201703150006035_JustDate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703151429526_CommentOutICollectionClass.cs" />
+    <Compile Include="Migrations\201703151429526_CommentOutICollectionClass.Designer.cs">
+      <DependentUpon>201703151429526_CommentOutICollectionClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703151535425_UserId.cs" />
+    <Compile Include="Migrations\201703151535425_UserId.Designer.cs">
+      <DependentUpon>201703151535425_UserId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703172044130_UserConnectionTest.cs" />
+    <Compile Include="Migrations\201703172044130_UserConnectionTest.Designer.cs">
+      <DependentUpon>201703172044130_UserConnectionTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703172056532_UndoChange.cs" />
+    <Compile Include="Migrations\201703172056532_UndoChange.Designer.cs">
+      <DependentUpon>201703172056532_UndoChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -234,6 +250,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\3types.jpg" />
     <Content Include="Content\images\Brain Gears.png" />
+    <Content Include="Content\images\rsz_1kinimage.png" />
+    <Content Include="Content\images\rsz_auditoryimg.png" />
+    <Content Include="Content\images\rsz_visualimage.png" />
     <Content Include="Content\images\VAKLearningStyles circle.jpg" />
     <Content Include="Content\Resources.css" />
     <Content Include="favicon.ico" />
@@ -277,7 +296,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -335,6 +356,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703150006035_JustDate.resx">
       <DependentUpon>201703150006035_JustDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703151429526_CommentOutICollectionClass.resx">
+      <DependentUpon>201703151429526_CommentOutICollectionClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703151535425_UserId.resx">
+      <DependentUpon>201703151535425_UserId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703172044130_UserConnectionTest.resx">
+      <DependentUpon>201703172044130_UserConnectionTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703172056532_UndoChange.resx">
+      <DependentUpon>201703172056532_UndoChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

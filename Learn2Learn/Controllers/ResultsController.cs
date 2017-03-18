@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Learn2Learn.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Learn2Learn.Controllers
 {
@@ -18,8 +20,22 @@ namespace Learn2Learn.Controllers
         [Authorize] //view profile
         public ActionResult Index()
         {
-    
-            return View(db.Results.Include(q=> q.ApplicationUser).ToList());
+            //var userID = User.Identity.GetUserId();
+            //var user = (from u in db.Users
+            //            where u.Id == userID
+            //            select u).FirstOrDefault();
+            UserManager<ApplicationUser> UserManager =
+    new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            ApplicationUser currentUser = UserManager.FindById(User.Identity.GetUserId());
+            var resultList = db.Results.ToList();
+            if (!UserManager.GetRoles(currentUser.Id).Contains("CanManageAssessments"))
+            {
+                resultList = resultList.Where(x => x.ApplicationUser == currentUser).ToList();
+            }
+            return View(resultList);
+            //var results = db.Results.ToList();
+            //var author = results[0].ApplicationUser;
+            //return View(author);
         }
 
         // GET: Results/Details/5
@@ -44,6 +60,7 @@ namespace Learn2Learn.Controllers
             return View();
         }
 
+
         // POST: Results/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -53,10 +70,15 @@ namespace Learn2Learn.Controllers
         {
             if (ModelState.IsValid)
             {
-              
+
+                UserManager<ApplicationUser> UserManager =
+                    new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+                ApplicationUser currentUser = UserManager.FindById(User.Identity.GetUserId());
+                results.ApplicationUser = currentUser;
                 db.Results.Add(results);
                 db.SaveChanges();
                 return RedirectToAction("Index");
+
             }
 
             return View(results);
