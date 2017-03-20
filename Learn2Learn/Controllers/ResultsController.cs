@@ -17,7 +17,7 @@ namespace Learn2Learn.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Results
-        [Authorize] //view profile
+        
         public ActionResult Index()
         {
             //var userID = User.Identity.GetUserId();
