@@ -52,7 +52,7 @@
                         You probably: Prefer to work in groups, like to discuss ideas, recite information to remember it, repeat back instructions.
 
                         You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.*@
-                    <br />  @Html.ActionLink("Auditory Portal", "AuditoryPortal", "Home", new { @class="btn btn-primary"})
+                    <br />  @Html.ActionLink("Auditory Portal", "AuditoryPortal", "Home", null, new { @class="btn btn-primary"})
                 </div>
             }
             @if (valueIndex == 1)
@@ -69,7 +69,7 @@
                         from visual displays such as diagrams. Details notes tend to help visual learns absorb information.
 
                         You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.*@
-                    <br /> @Html.ActionLink("Visual Portal", "VisualPortal", "Home", new { @class = "btn btn-primary" })
+                    <br /> @Html.ActionLink("Visual Portal", "VisualPortal", "Home", null, new { @class = "btn btn-primary" })
                 </div>
             }
             @if (valueIndex == 2)
@@ -84,7 +84,7 @@
                         Kinesthetic learners often have trouble sitting for long periods of time and can become distracted
                         by their need for exploration.
                         You probably: Take frequent breaks, prefer to work standing, listen to music while studying, skim material to get a rough idea, and likes to have an object or learning prop.*@
-                    <br/>@Html.ActionLink("Kinesthetic Portal", "KinPortal", "Home", new { @class = "btn btn-primary" })
+                    <br/>@Html.ActionLink("Kinesthetic Portal", "KinPortal", "Home", null, new { @class = "btn btn-primary" })
                 </div>
             }
         </div>
