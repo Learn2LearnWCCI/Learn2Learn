@@ -1,21 +1,18 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<link href="~/Content/Home.css" rel="stylesheet" />
 
         <div class="jumbotron hometron">
-            <h1>
-                <img src="~/Content/images/L2L Text w BG.png" /></h1>
-            @*<p></p>*@
+            @*this is where our jumbotron image is held*@
         </div>
 
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Assessment</h2>
         <button class="btn btn-default">@Html.ActionLink("Take Assessment", "Create", "Results")</button>
     </div>
     <div class="col-md-4">
-        <h2>Resources</h2>
         <button class="btn btn-default">@Html.ActionLink("View Resources", "Resources", "Home")</button>
     </div>
 </div>

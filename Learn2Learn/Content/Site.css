@@ -2,17 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-/*Jumbtron on home page*/
-.hometron {
-    background-image: url('images/typing-690856_1920.jpg');
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-width: 1439px;
-    height: 1000px;
-        /*padding-left: 1px;
-    padding-right: 1px;*/
-}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -36,22 +26,24 @@ textarea {
 .questions, .hidedata {
     display: none;
 }
-.next[disabled]
-{
-color:grey;
+
+.next[disabled] {
+    color: grey;
 }
-#btnSubmit
-{
-display: none;
-color:grey;
+
+#btnSubmit {
+    display: none;
+    color: grey;
 }
+
 .show {
     display: contents;
 }
+
 .results {
     width: auto;
-    
 }
+
 .summary {
     display: block;
     text-align: center;
