@@ -11,6 +11,7 @@
 
 </head>
 <body>
+<<<<<<< HEAD
     <div class="navbar navbar-inverse navbar-fixed-top" id="navtoggle">
         <div class="container">
             <div class="navbar-header">
@@ -28,6 +29,25 @@
                     <li>@Html.ActionLink("Assessment", "Create", "Results")</li>
                     <li>@Html.ActionLink("Resources", "Resources", "Home")</li>
                     <li>@Html.ActionLink("MyProfile", "Index", "Results")</li>
+=======
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="~/home">
+                <img src="~/Content/images/L2L Brand.png" width="25" height="30" alt="Learn2Learn"/>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Assessment", "Create", "Results")</li>
+                <li>@Html.ActionLink("Resources", "Resources", "Home")</li>
+                <li>@Html.ActionLink("MyProfile", "Index", "Results")</li>
+>>>>>>> 206a1d346b3299f59e70aa19b13f51467bf57b06
 
                 </ul>
                 @Html.Partial("_LoginPartial")
