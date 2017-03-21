@@ -103,11 +103,8 @@ function drawChart() {
     });
 };
 
-<<<<<<< HEAD
 //function initialize() {
 //    $(".modal-link").click(function() {
 //        $("#myModal").modal("show");
 //    });
 //};
-=======
->>>>>>> rafeesbranch
