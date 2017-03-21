@@ -7,8 +7,7 @@
     <title>@ViewBag.Title - Learn2Learn</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
-
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|News+Cycle" rel="stylesheet">
 </head>
 <body>
 <<<<<<< HEAD
@@ -26,7 +25,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Assessment", "Create", "Results")</li>
+                    <li>@Html.ActionLink("Assessment", "Create", "Results",null, new {@class="modal-link btn-xs btn-success"})</li>
                     <li>@Html.ActionLink("Resources", "Resources", "Home")</li>
                     <li>@Html.ActionLink("MyProfile", "Index", "Results")</li>
 =======
@@ -56,7 +55,7 @@
     </div>
     <div class="container-fluid body-content">
         @RenderBody()
-        <hr />
+
         <footer>
             <p>&copy; @DateTime.Now.Year - Learn2Learn</p>
         </footer>

@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     initialize();
+    $("#myModal").modal("show");
 });
 
 //creates assessmentResults object with property of scores array 
@@ -77,9 +78,7 @@ assessmentResults.enableSubmit = function () {
     $("#auditoryResult").val(a);
     $("#kinestheticResult").val(k);
     $("#visualResult").val(v);
-    alert(a);
-    alert(v);
-    alert(k);
+
 };
 
 google.charts.load('current', { 'packages': ['corechart'] });
@@ -103,3 +102,9 @@ function drawChart() {
         chart.draw(data, options);
     });
 };
+
+//function initialize() {
+//    $(".modal-link").click(function() {
+//        $("#myModal").modal("show");
+//    });
+//};
