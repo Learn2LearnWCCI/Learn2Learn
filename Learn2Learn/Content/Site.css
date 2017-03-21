@@ -1,7 +1,13 @@
-﻿body {
+﻿@font-face {
+    font-family: 'BondoluoPeek';
+    src: url('../BondoluoPeek.ttf') format('truetype');
+}
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'BondoluoPeek';
 }
+
 /*Jumbtron on home page*/
 .hometron {
     background-image: url('images/typing-690856_1920.jpg');
