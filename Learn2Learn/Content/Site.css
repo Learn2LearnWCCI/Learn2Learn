@@ -9,15 +9,16 @@ body {
     font-family: 'BondoluoPeek';
 }
 
-.assessintrofont{
+.assessintrofont {
     font-family: 'Architects Daughter', cursive;
     font-size: 30px;
     /*Jumbtron on home page*/
 }
+
 .assessfont {
     font-family: 'News Cycle', sans-serif;
     font-size: 30px;
-    font-weight:300;
+    font-weight: 300;
 }
 
 
@@ -40,15 +41,17 @@ select,
 textarea {
     max-width: 280px;
 }
+
 h4 {
-        font-family: 'News Cycle', sans-serif;
+    font-family: 'News Cycle', sans-serif;
     font-size: 30px;
     font-weight: bold;
-
 }
+
 label {
     font-weight: normal;
 }
+
 .questions, .hidedata {
     display: none;
 }
@@ -74,8 +77,23 @@ label {
     display: block;
     text-align: center;
 }
+
 .btn-success {
     color: #fff;
     background-color: transparent;
-    border-color:transparent;
+    border-color: transparent;
+}
+
+.start_test {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 18px;
+}
+.orangefont{
+    color: #F89E42;
+}
+.bluefont {
+    color: #18B3A6;
+}
+.bold {
+    font-weight: bold;
 }
