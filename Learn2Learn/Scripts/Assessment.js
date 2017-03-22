@@ -101,11 +101,8 @@ function drawChart() {
 
         chart.draw(data, options);
     });
-};
-
-function initialize() {
         setTimeout(function() {
                 $(".fly-in-text").removeClass("hidden");
             },
             500);
-};
+};//end of initialize function 
