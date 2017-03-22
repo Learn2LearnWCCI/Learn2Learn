@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     initialize();
 });
-
 //creates assessmentResults object with property of scores array 
 var assessmentResults = {
     "scores": []
@@ -24,6 +23,13 @@ var v = 0;
 $("#0").show();
 
 function initialize() {
+    //$("nav li").mouseover(function () {
+    //    $("nav li").slideDown("slow");
+    //});
+    $("#flip").hover(function(){
+        $(".pane").slideToggle("slow");
+    });
+
     $("input").on("click",
         function () {
             $(".next").prop("disabled", false);

@@ -2,15 +2,49 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
+/*Navbar*/
+.navbar-brand img {
+    background-color: black;
+}
+
+.icon-bar {
+    background-color: black;
+}
+
+.navbar-nav {
+    float: none;
+  text-align: center;
+    /*float: none;
+    margin: 0 auto;
+    display: block;
+    text-align: center;*/
+}
+
+.navbar .navbar-collapse {
+    float: none;
+    text-align: center;
+}
+
+.navbar-nav li {
+    float: none;
+    display: inline-block;
+}
+.pane {
+    margin-top:50px;
+    background-color: transparent;
+    display: none;
+    text-align: center;
+    padding-bottom:10px;
+}
 /*Jumbtron on home page*/
 .hometron {
     background-image: url('images/typing-690856_1920.jpg');
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-width: 1439px;
+    width: 1439px;
     height: 1000px;
-        /*padding-left: 1px;
+    /*padding-left: 1px;
     padding-right: 1px;*/
 }
 /* Set padding to keep content from hitting the edges */
@@ -18,14 +52,12 @@ width: 1439px;
     padding-left: 15px;
     padding-right: 15px;
 }
-
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
     white-space: normal;
 }
-
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -36,22 +68,24 @@ textarea {
 .questions, .hidedata {
     display: none;
 }
-.next[disabled]
-{
-color:grey;
+
+.next[disabled] {
+    color: grey;
 }
-#btnSubmit
-{
-display: none;
-color:grey;
+
+#btnSubmit {
+    display: none;
+    color: grey;
 }
+
 .show {
     display: contents;
 }
+
 .results {
     width: auto;
-    
 }
+
 .summary {
     display: block;
     text-align: center;
