@@ -2,9 +2,11 @@
     ViewBag.Title = "Home Page";
 }
 <link href="~/Content/Home.css" rel="stylesheet" />
+
+
 <div class="jumbotron hometron">
 </div>
-<div>
+<div class="img-responsive">
     <ul class="fly-in-text hidden">
         <li>W</li>
         <li>E</li>
@@ -15,11 +17,14 @@
         <li>E</li>
     </ul>
 </div>
-<div class="row mainbuttons">
-    <div class="col-md-4">
-        <button class="btn btn-default">@Html.ActionLink("Take Assessment", "Create", "Results")</button>
+
+
+<div class="row homebuttons ">
+    <div class="col-md-6">
+        @Html.ActionLink("Take Assessment", "Create", "Results",null, new { @class = "btn thn-default leftBtn" })       
     </div>
-    <div class="col-md-4">
-        <button class="btn btn-default">@Html.ActionLink("View Resources", "Resources", "Home")</button>
+
+    <div class="col-md-6 text-right">
+        @Html.ActionLink("View Resources", "Resources", "Home" ,null, new { @class = "btn thn-default rightBtn" })
     </div>
 </div>
