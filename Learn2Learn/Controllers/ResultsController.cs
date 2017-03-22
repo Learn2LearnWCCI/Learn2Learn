@@ -18,7 +18,7 @@ namespace Learn2Learn.Controllers
 
         // GET: Results
 
-        /*[Authorize]*/ //view profile
+        [Authorize]
         public ActionResult Index()
         {
             //var userID = User.Identity.GetUserId();
