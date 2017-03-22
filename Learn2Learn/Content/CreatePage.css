@@ -1,0 +1,25 @@
+﻿body {
+    background-image: url('images/chalkboard-517818_1920.jpg');
+}
+
+.assessintrofont {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 28px;
+    color: black;
+    /*Jumbtron on home page*/
+}
+
+.assessfont {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #e0dbd1; /*chalk white*/
+}
+
+.modal-content {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.questions {
+    border: 3px solid #18B3A6;
+}

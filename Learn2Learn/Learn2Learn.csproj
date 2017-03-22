@@ -248,9 +248,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CreatePage.css" />
+    <Content Include="Content\dataurl.css" />
     <Content Include="Content\Home.css" />
     <Content Include="Content\images\3types.jpg" />
     <Content Include="Content\images\Brain Gears.png" />
+    <Content Include="Content\images\chalkboard-517818_1920.jpg" />
     <Content Include="Content\images\L2L Brand.png" />
     <Content Include="Content\images\L2L Text w BG.png" />
     <Content Include="Content\images\rsz_1kinimage.png" />
