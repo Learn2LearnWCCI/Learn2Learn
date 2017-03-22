@@ -16,6 +16,41 @@ body {
     padding-right: 15px;
 }
 
+/*Navbar*/
+.navbar-brand img {
+    background-color: black;
+}
+
+.icon-bar {
+    background-color: black;
+}
+
+.navbar-nav {
+    float: none;
+  text-align: center;
+    /*float: none;
+    margin: 0 auto;
+    display: block;
+    text-align: center;*/
+}
+
+.navbar .navbar-collapse {
+    float: none;
+    text-align: center;
+}
+
+.navbar-nav li {
+    float: none;
+    display: inline-block;
+}
+.pane {
+    margin-top:5px;
+    background-color: transparent;
+    display: none;
+    text-align: center;
+    padding-bottom:10px;
+}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */

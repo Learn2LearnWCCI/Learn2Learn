@@ -25,6 +25,7 @@ var v = 0;
 $("#0").show();
 
 function initialize() {
+
     $("input").on("click",
         function () {
             $(".next").prop("disabled", false);
@@ -85,7 +86,7 @@ google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
-    $(".row").each(function () {
+    $(".row").each(function() {
         var data = google.visualization.arrayToDataTable([
             ['Styles', 'Scores'],
             ['Visual', parseInt($(this).find('input[name="item.VisualResult"]').val())],
@@ -101,8 +102,15 @@ function drawChart() {
 
         chart.draw(data, options);
     });
-        setTimeout(function() {
-                $(".fly-in-text").removeClass("hidden");
-            },
-            500);
-};//end of initialize function 
+};
+
+function initialize() {
+    $("#flip").hover(function () {
+        $(".pane").slideToggle("slow");
+    });
+    setTimeout(function() {
+            $(".fly-in-text").removeClass("hidden");
+        },
+        500);
+//end of initialize function 
+};
