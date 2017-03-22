@@ -103,8 +103,9 @@ function drawChart() {
     });
 };
 
-//function initialize() {
-//    $(".modal-link").click(function() {
-//        $("#myModal").modal("show");
-//    });
-//};
+function initialize() {
+        setTimeout(function() {
+                $(".fly-in-text").removeClass("hidden");
+            },
+            500);
+};

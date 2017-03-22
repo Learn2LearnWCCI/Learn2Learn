@@ -1,17 +1,89 @@
-﻿body {
-   background-image: url('images/typing-690856_1920.jpg');
-   background-size: cover;
+﻿@font-face {
+    font-family: 'BondoluoPeek';
+    src: url('../BondoluoPeek.ttf') format('truetype');
+}
+
+body {
+    background-image: url('images/typing-690856_1920.jpg');
+    background-size: cover;
 }
 /*Jumbtron on home page*/
 .hometron {
-   position:relative;
-   top:25px;
-   padding-top: 125px;
-   padding-bottom: 125px;    
-   background-image: url('images/L2L Text w BG.png');
-   background-size: 100% 100%;
-   background-repeat:no-repeat;
-   background-color:transparent;
-
+    position: relative;
+    top: 25px;
+    padding-top: 125px;
+    padding-bottom: 125px;
+    margin-top: 45px;
+    background-image: url('images/L2L Text w BG.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.fly-in-text {
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+ul.fly-in-text {
+    padding-bottom: 40px;
+    padding-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    top: 400px;
+}
+
+.fly-in-text li {
+    display: inline-block;
+    margin-right: 50px;
+    font-family: 'BondoluoPeek';
+    font-weight: 300;
+    font-size: 4em;
+    color: #fff;
+    opacity: 1;
+    transition: all 2.5s ease;
+}
+
+    .fly-in-text li:last-child {
+        margin-right: 0;
+    }
+
+.fly-in-text.hidden li {
+    opacity: 0;
+}
+
+    .fly-in-text.hidden li:nth-child(1) {
+        transform: translateX(-200px) translateY(-200px);
+    }
+
+    .fly-in-text.hidden li:nth-child(2) {
+        transform: translateX(20px) translateY(100px);
+    }
+
+    .fly-in-text.hidden li:nth-child(3) {
+        transform: translateX(-150px) translateY(-80px);
+    }
+
+    .fly-in-text.hidden li:nth-child(4) {
+        transform: translateX(10px) translateY(-200px);
+    }
+
+    .fly-in-text.hidden li:nth-child(5) {
+        transform: translateX(-300px) translateY(200px);
+    }
+
+    .fly-in-text.hidden li:nth-child(6) {
+        transform: translateX(20px) translateY(-20px);
+    }
+
+    .fly-in-text.hidden li:nth-child(7) {
+        transform: translateX(30px) translateY(200px);
+    }
