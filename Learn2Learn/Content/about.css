@@ -1,0 +1,17 @@
+﻿body {
+    background-image: url('images/typewriter-801921_1920.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+.txtContainer1{
+    font-family:Arial;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.txtContainer2{
+    font-family:Arial;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.txtContainer3{
+    font-family:Arial;
+    background-color: rgba(255, 255, 255, 0.6);
+}
