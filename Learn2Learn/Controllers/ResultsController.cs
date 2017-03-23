@@ -8,10 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Learn2Learn.Models;
 using Microsoft.AspNet.Identity;
-<<<<<<< HEAD
 using Microsoft.AspNet.Identity.EntityFramework;
-=======
->>>>>>> 35fa59b521acabfeb09d89287964d12bd68647a6
 
 namespace Learn2Learn.Controllers
 {
@@ -21,15 +18,13 @@ namespace Learn2Learn.Controllers
 
         // GET: Results
 
-        [Authorize]
         public ActionResult Index()
         {
             //var userID = User.Identity.GetUserId();
             //var user = (from u in db.Users
             //            where u.Id == userID
             //            select u).FirstOrDefault();
-            UserManager<ApplicationUser> UserManager =
-    new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
+            UserManager<ApplicationUser> UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(db));
             ApplicationUser currentUser = UserManager.FindById(User.Identity.GetUserId());
             var resultList = db.Results.ToList();
             if (!UserManager.GetRoles(currentUser.Id).Contains("CanManageAssessments"))
@@ -72,8 +67,6 @@ namespace Learn2Learn.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,AuditoryResult,VisualResult,KinestheticResult,Date,ApplicationUser")] Results results)
         {
-            //results.ApplicationUser.Email = User.Identity.GetUserName();
-
             if (ModelState.IsValid)
             {
 
