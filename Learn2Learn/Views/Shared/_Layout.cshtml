@@ -12,7 +12,14 @@
 <body>
     <div class="container">
         <div class="navbar navbar-fixed-top" id="flip">
-            <h2 class="text-center menu"><span>Menu</span></h2>
+            <div class="row">
+                    <a class="brand" href="~/home">
+                        <img src="~/Content/images/L2L Brand.png" width="30" height="50" alt="Learn2Learn" />
+                    </a>
+                    <h2 class="menu">
+                        <span>Menu</span>
+                    </h2>
+            </div>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -21,9 +28,6 @@
                 </button>
             </div>
             <div class="navbar-collapse collapse">
-                <a class="navbar-brand pane" href="~/home">
-                    <img src="~/Content/images/L2L Brand.png" width="30" height="50" alt="Learn2Learn"/>
-                </a>
                 <ul class="nav navbar-nav pane">
                     <li>@Html.ActionLink("Assessment", "Create", "Results")</li>
                     <li>@Html.ActionLink("Resources", "Resources", "Home")</li>

@@ -24,6 +24,11 @@ var v = 0;
 $("#0").show();
 
 function initialize() {
+    setTimeout(function () {
+        $(".fly-in-text").removeClass("hidden");
+    },
+     500);
+
     $("#myModal").modal("show");
 
     $("#flip").hover(function () {
@@ -106,8 +111,4 @@ function drawChart() {
 
         chart.draw(data, options);
     });
-    setTimeout(function () {
-        $(".fly-in-text").removeClass("hidden");
-    },
-        500);
 };//end of initialize function 

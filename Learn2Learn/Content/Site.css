@@ -20,10 +20,12 @@ body {
 }
 
 /*Navbar*/
-.navbar-brand img {
-    background-color: black;
+.brand img {
+    background-color: #333333;
 }
-
+.brand {
+    text-align: left;
+}
 .icon-bar {
     background-color: black;
 }
@@ -122,4 +124,9 @@ label {
 .bold {
     font-weight: bold;
 }
-
+.menu span {
+    font-weight: 600;
+}
+.menu {
+        text-align: center;
+}
