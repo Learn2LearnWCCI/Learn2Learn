@@ -1,0 +1,57 @@
+﻿body {
+    background-image: url('images/rsz_chalkboard-517818_1920.jpg');
+}
+
+.assessintrofont {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 28px;
+    color: black;
+    /*Jumbtron on home page*/
+}
+
+.next {
+    background-color: #F89E42;
+    font-size: 20px;
+    color: white;
+}
+
+    .next[disabled] {
+        background-color: #e0dbd1;
+        font-size: 20px;
+        color: white;
+        border: none;
+    }
+
+
+.assessfont {
+    margin-top: 100px;
+    font-family: 'DK Cool Crayon';
+    font-size: 28px;
+    font-weight: 300;
+    color: #e0dbd1; /*chalk white*/
+}
+.assessfont p {
+    margin: 0 auto;
+}
+    .assessfont h4 {
+        font-family: 'DK Cool Crayon';
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+.modal-content {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.start_test {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 18px;
+}
+
+.modal-body {
+    background-color: #EBEBEB;
+}
+
+.questions {
+}

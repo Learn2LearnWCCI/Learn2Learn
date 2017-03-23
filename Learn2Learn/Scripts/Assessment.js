@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     initialize();
-    $("#myModal").modal("show");
+
 });
 
 //creates assessmentResults object with property of scores array 
@@ -25,6 +25,19 @@ var v = 0;
 $("#0").show();
 
 function initialize() {
+    setTimeout(function () {
+        $(".fly-in-text").removeClass("hidden");
+    },
+     500);
+
+    $("#myModal").modal("show");
+
+    $("#flip").hover(function () {
+        $(".pane").slideDown("slow");
+    });
+    $(".pane").mouseleave(function () {
+        $(this).slideUp("slow");
+    });
     $("input").on("click",
         function () {
             $(".next").prop("disabled", false);
@@ -64,23 +77,22 @@ assessmentResults.enableSubmit = function () {
     $("#btnSubmit").show();
 
     $.each(assessmentResults.scores,
-        function (index, value) {
-            if (value === "a") {
-                a++;
-            }
-            if (value === "k") {
-                k++;
-            }
-            if (value === "v") {
-                v++;
-            }
-        });
+         function (index, value) {
+             if (value === "a") {
+                 a++;
+             }
+             if (value === "k") {
+                 k++;
+             }
+             if (value === "v") {
+                 v++;
+             }
+         });
     $("#auditoryResult").val(a);
     $("#kinestheticResult").val(k);
     $("#visualResult").val(v);
 
 };
-
 google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
 
@@ -103,9 +115,9 @@ function drawChart() {
     });
 };
 
-function initialize() {
-        setTimeout(function() {
-                $(".fly-in-text").removeClass("hidden");
-            },
-            500);
-};
+//function initialize() {
+//        setTimeout(function() {
+//                $(".fly-in-text").removeClass("hidden");
+//            },
+//            500);
+//};

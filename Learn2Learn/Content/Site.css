@@ -1,8 +1,11 @@
 ﻿@font-face {
     font-family: 'BondoluoPeek';
-    src: url('../BondoluoPeek.ttf') format('truetype');
+    /*src: url('../BondoluoPeek.ttf') format('truetype');*/
 }
-
+@font-face {
+    font-family: 'DK Cool Crayon';
+    src: url('../fonts/DK Cool Crayon.ttf') format('truetype');
+}
 body {
     padding-top: 50px;
     padding-bottom: 20px;
