@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
     initialize();
-    $("#myModal").modal("show");
 });
 
 //creates assessmentResults object with property of scores array 
@@ -25,6 +24,11 @@ var v = 0;
 $("#0").show();
 
 function initialize() {
+    $("#myModal").modal("show");
+
+    $("#flip").hover(function () {
+        $(".pane").slideToggle("slow");
+    });
 
     $("input").on("click",
         function () {
@@ -86,7 +90,7 @@ google.charts.load('current', { 'packages': ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
-    $(".row").each(function() {
+    $(".row").each(function () {
         var data = google.visualization.arrayToDataTable([
             ['Styles', 'Scores'],
             ['Visual', parseInt($(this).find('input[name="item.VisualResult"]').val())],
@@ -102,15 +106,8 @@ function drawChart() {
 
         chart.draw(data, options);
     });
-};
-
-function initialize() {
-    $("#flip").hover(function () {
-        $(".pane").slideToggle("slow");
-    });
-    setTimeout(function() {
-            $(".fly-in-text").removeClass("hidden");
-        },
+    setTimeout(function () {
+        $(".fly-in-text").removeClass("hidden");
+    },
         500);
-//end of initialize function 
-};
+};//end of initialize function 

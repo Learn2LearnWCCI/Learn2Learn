@@ -6,23 +6,20 @@
 body {
     background-image: url('images/typing-690856_1920.jpg');
     background-size: cover;
-    background-repeat:no-repeat;
-
+    background-repeat: no-repeat;
 }
 /*Jumbtron on home page*/
 .hometron {
-
     position: relative;
     top: 25px;
     padding-top: 125px;
     padding-bottom: 125px;
     margin-top: 45px;
-    border-radius:20px;
+    border-radius: 20px;
     background-image: url('images/L2L Text w BG.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: transparent;
-
 }
 
 
@@ -53,7 +50,7 @@ ul.fly-in-text {
     display: inline-block;
     margin-right: 50px;
     font-family: 'BondoluoPeek';
-    font-weight: 300;
+    font-weight: 900;
     font-size: 4em;
     color: #fff;
     opacity: 1;
@@ -104,11 +101,13 @@ ul.fly-in-text {
     background-color: #F89E42;
     color: white;
     font-size: 18px;
+    letter-spacing: 3px;
     font-weight: 700;
 }
 
 .rightBtn {
     background-color: #18B3A6;
+    letter-spacing: 3px;
     color: white;
     font-size: 18px;
     font-weight: 700;

@@ -253,11 +253,11 @@
     <Content Include="Content\Home.css" />
     <Content Include="Content\images\3types.jpg" />
     <Content Include="Content\images\Brain Gears.png" />
-    <Content Include="Content\images\chalkboard-517818_1920.jpg" />
     <Content Include="Content\images\L2L Brand.png" />
     <Content Include="Content\images\L2L Text w BG.png" />
     <Content Include="Content\images\rsz_1kinimage.png" />
     <Content Include="Content\images\rsz_auditoryimg.png" />
+    <Content Include="Content\images\rsz_chalkboard-517818_1920.jpg" />
     <Content Include="Content\images\rsz_visualimage.png" />
     <Content Include="Content\images\typewriter-801921_1920.jpg" />
     <Content Include="Content\images\typing-690856_1920.jpg" />
@@ -281,6 +281,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="BondoluoPeek.ttf" />
+    <Content Include="fonts\DK Cool Crayon.ttf" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
