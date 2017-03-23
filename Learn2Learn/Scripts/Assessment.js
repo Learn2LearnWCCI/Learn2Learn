@@ -23,9 +23,6 @@ var v = 0;
 $("#0").show();
 
 function initialize() {
-    //$("nav li").mouseover(function () {
-    //    $("nav li").slideDown("slow");
-    //});
     $("#flip").hover(function(){
         $(".pane").slideToggle("slow");
     });

@@ -10,7 +10,6 @@
 .icon-bar {
     background-color: black;
 }
-
 .navbar-nav {
     float: none;
   text-align: center;
@@ -19,12 +18,10 @@
     display: block;
     text-align: center;*/
 }
-
 .navbar .navbar-collapse {
     float: none;
     text-align: center;
 }
-
 .navbar-nav li {
     float: none;
     display: inline-block;
