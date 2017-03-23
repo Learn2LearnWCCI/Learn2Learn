@@ -219,6 +219,7 @@
     <Compile Include="Migrations\201703150006035_JustDate.Designer.cs">
       <DependentUpon>201703150006035_JustDate.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201703151429526_CommentOutICollectionClass.cs" />
     <Compile Include="Migrations\201703151429526_CommentOutICollectionClass.Designer.cs">
       <DependentUpon>201703151429526_CommentOutICollectionClass.cs</DependentUpon>
@@ -234,6 +235,15 @@
     <Compile Include="Migrations\201703172056532_UndoChange.cs" />
     <Compile Include="Migrations\201703172056532_UndoChange.Designer.cs">
       <DependentUpon>201703172056532_UndoChange.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201703161738108_AddUser.cs" />
+    <Compile Include="Migrations\201703161738108_AddUser.Designer.cs">
+      <DependentUpon>201703161738108_AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703161755266_DeleteUserVariable.cs" />
+    <Compile Include="Migrations\201703161755266_DeleteUserVariable.Designer.cs">
+      <DependentUpon>201703161755266_DeleteUserVariable.cs</DependentUpon>
+>>>>>>> 35fa59b521acabfeb09d89287964d12bd68647a6
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -248,6 +258,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+<<<<<<< HEAD
     <Content Include="Content\Home.css" />
     <Content Include="Content\images\3types.jpg" />
     <Content Include="Content\images\auditoryStyle.png" />
@@ -262,6 +273,11 @@
     <Content Include="Content\images\typing-690856_1920.jpg" />
     <Content Include="Content\images\VAKLearningStyles circle.jpg" />
     <Content Include="Content\navbar-fixed-side.css" />
+=======
+    <Content Include="Content\images\3types.jpg" />
+    <Content Include="Content\images\Brain Gears.png" />
+    <Content Include="Content\images\VAKLearningStyles circle.jpg" />
+>>>>>>> 35fa59b521acabfeb09d89287964d12bd68647a6
     <Content Include="Content\Resources.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -366,6 +382,7 @@
     <EmbeddedResource Include="Migrations\201703150006035_JustDate.resx">
       <DependentUpon>201703150006035_JustDate.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201703151429526_CommentOutICollectionClass.resx">
       <DependentUpon>201703151429526_CommentOutICollectionClass.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +394,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703172056532_UndoChange.resx">
       <DependentUpon>201703172056532_UndoChange.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201703161738108_AddUser.resx">
+      <DependentUpon>201703161738108_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703161755266_DeleteUserVariable.resx">
+      <DependentUpon>201703161755266_DeleteUserVariable.cs</DependentUpon>
+>>>>>>> 35fa59b521acabfeb09d89287964d12bd68647a6
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

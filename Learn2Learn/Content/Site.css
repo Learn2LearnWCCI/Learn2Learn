@@ -51,6 +51,7 @@ textarea {
     max-width: 280px;
 }
 
+<<<<<<< HEAD
 h4 {
     font-family: 'News Cycle', sans-serif;
     font-size: 30px;
@@ -62,6 +63,9 @@ label {
 }
 
 .questions, .hidedata {
+=======
+.questions, .hidedata, #vissummary, #audsummary, #kinsummary {
+>>>>>>> 35fa59b521acabfeb09d89287964d12bd68647a6
     display: none;
 }
 
@@ -80,6 +84,7 @@ label {
     display: contents;
 }
 
+<<<<<<< HEAD
 .results {
     width: auto;
     
@@ -170,3 +175,5 @@ a.assessmentLink:hover{
 h4.portals {
     font-weight: bold;
 }
+=======
+>>>>>>> 35fa59b521acabfeb09d89287964d12bd68647a6

@@ -1,7 +1,6 @@
-﻿@model Learn2Learn.Models.Results
-
+﻿
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Assessment";
 }
 
 <h2>Assessment</h2>
@@ -55,7 +54,7 @@
 </div>
 
 <div class="questions" id="3">
-    <h4>4. If I am unsure how to spell a word I:</h4>
+    <h4>4. If I am unsure how to</h4>
     <p>
         <input id="q-4v" name="q-4" type="radio" value="v" />
         <label for="q-4v">write it in order to determine if it looks right.</label>
@@ -86,7 +85,7 @@
     </p>
 </div>
 
-@*<div class="questions" id="5">
+<div class="questions" id="5">
     <h4>6. If I had to remember a list of items, I would remember it best if: </h4>
     <p>
         <input id="q-6v" name="q-6" type="radio" value="v" />
@@ -214,7 +213,6 @@
     </p>
 </div>
 
-<<<<<<< HEAD
 <div class="questions" id="13">
     <h4>14. When trying to recall names, I remember:</h4>
     <p>
@@ -325,186 +323,30 @@
         <input id="q-20k" name="q-20" type="radio" value="k" />
         <label for="q-20k">take the computer apart and try to figure it out for yourself</label>
     </p>
-</div>*@
-=======
-<div class="questions" id="0">
-    <h4>1. If I have to learn how to do something, I learn best when I:</h4>
-    <p>
-        <input id="q-1v" name="q-1" type="radio" value="v">
-        <label for="q-1v">watch someone show me how. </label>
-    </p>
-    <p>
-        <input id="q-1a" name="q-1" type="radio" value="a">
-        <label for="q-1a">hear someone tell me how.</label>
-    </p>
-    <p>
-        <input id="q-1k" name="q-1" type="radio" value="k">
-        <label for="q-1k">try to do it myself.  </label>
-    </p>
 </div>
 
-<div class="questions" id="1">
-    <h4>2. When I read, I often find that I:</h4>
-    <p>
-        <input id="q-2v" name="q-2" type="radio" value="v" />
-        <label for="q-2v">visualize what I am reading in my mind’s eye.</label>
-    </p>
-    <p>
-        <input id="q-2a" name="q-2" type="radio" value="a" />
-        <label for="q-2a">read out loud or hear the words inside my head.</label>
-    </p>
-    <p>
-        <input id="q-2k" name="q-2" type="radio" value="k" />
-        <label for="q-2k">fidget and try to “feel” the content.</label>
-    </p>
-</div>
 
-<div class="questions" id="2">
-    <h4>3. When asked to give directions, I:</h4>
-    <p>
-        <input id="q-3v" name="q-3" type="radio" value="v" />
-        <label for="q-3v">see the actual places in my mind as I say them or prefer to draw them.</label>
-    </p>
-    <p>
-        <input id="q-3a" name="q-3" type="radio" value="a" />
-        <label for="q-3a">have no difficulty in giving them verbally.</label>
-    </p>
-    <p>
-        <input id="q-3k" name="q-3" type="radio" value="k" />
-        <label for="q-3k">have to point or move my body as I give them.  </label>
-    </p>
-</div>
-
-<div class="questions" id="3">
-    <h4>4. If I am unsure how to</h4>
-    <p>
-        <input id="q-4v" name="q-4" type="radio" value="v" />
-        <label for="q-4v">write it in order to determine if it looks right.</label>
-    </p>
-    <p>
-        <input id="q-4a" name="q-4" type="radio" value="a" />
-        <label for="q-4a">spell it out loud in order to determine if it sounds right.</label>
-    </p>
-    <p>
-        <input id="q-4k" name="q-4" type="radio" value="k" />
-        <label for="q-4k">write it in order to determine if it feels right. </label>
-    </p>
-</div>
-
-<div class="questions" id="4">
-    <h4>5. When I write I:</h4>
-    <p>
-        <input id="q-5v" name="q-5" type="radio" value="v" />
-        <label for="q-5v">am concerned with how neat and well spaced my letters and words appear.</label>
-    </p>
-    <p>
-        <input id="q-5a" name="q-5" type="radio" value="a" />
-        <label for="q-5a">often say the letters and words to myself.</label>
-    </p>
-    <p>
-        <input id="q-5k" name="q-5" type="radio" value="k" />
-        <label for="q-5k">push hard on my part or pencil and can feel the flow of the words.</label>
-    </p>
-</div>
-<<<<<<< HEAD
-<!--Next button-->
-<div>
-    <br />
-    <hr />
-=======
-
->>>>>>> 20a05f9f41833ef193ab345e2cff79b1efe5332b
 <!-- The Next/Prev buttons-->
 <div>
     <br />
     <hr />
-<<<<<<< HEAD
-    @*<input class="btnNav"  id="btnPrev" type="button" disabled value="Prev"/>*@
-    @*<input class="next" disabled id="btnprev" type="button" value="Prev" />*@
->>>>>>> 35fa59b521acabfeb09d89287964d12bd68647a6
-    <input class="next" disabled id="btnnext" type="button" value="Next" />
-</div>
-<!-- The Submit button-->
-
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-
-    <div class="form-horizontal hidedata">
-=======
     @*<input class="prev" id="btnprev" type="button" value="Prev" disabled/>*@
     <input class="next" id="btnnext" type="button" value="Next" disabled />
 </div>
 
+<!-- The Submit button-->
+<div class="done">
+    <input disabled id="btnSubmit" class="btnSub" type="button" value="Submit" />
+</div>
 
-@using (Html.BeginForm()) 
+
+@using (@Html.BeginForm("Index", "Results", FormMethod.Post))
 {
-    @Html.AntiForgeryToken()
-
-    <div class="form-horizontal">
->>>>>>> 20a05f9f41833ef193ab345e2cff79b1efe5332b
-        <h4>Results</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.AuditoryResult, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-<<<<<<< HEAD
-                @Html.EditorFor(model => model.AuditoryResult, new { htmlAttributes = new { @class = "form-control", id = "auditoryResult" } })
-=======
-                @Html.EditorFor(model => model.AuditoryResult, new { htmlAttributes = new { @class = "form-control", @id = "visualResult" } })
->>>>>>> 20a05f9f41833ef193ab345e2cff79b1efe5332b
-                @Html.ValidationMessageFor(model => model.AuditoryResult, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.VisualResult, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-<<<<<<< HEAD
-                @Html.EditorFor(model => model.VisualResult, new { htmlAttributes = new { @class = "form -control", id = "visualResult" } })
-=======
-                @Html.EditorFor(model => model.VisualResult, new { htmlAttributes = new { @class = "form-control", @id = "auditoryResult" } })
->>>>>>> 20a05f9f41833ef193ab345e2cff79b1efe5332b
-                @Html.ValidationMessageFor(model => model.VisualResult, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.KinestheticResult, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-<<<<<<< HEAD
-                @Html.EditorFor(model => model.KinestheticResult, new { htmlAttributes = new { @class = "form-control", id = "kinestheticResult" } })
-=======
-                @Html.EditorFor(model => model.KinestheticResult, new { htmlAttributes = new { @class = "form-control", @id = "kinestheticResult" } })
->>>>>>> 20a05f9f41833ef193ab345e2cff79b1efe5332b
-                @Html.ValidationMessageFor(model => model.KinestheticResult, "", new { @class = "text-danger" })
-                @Html.TextBoxFor(x => x.Date, new { @Value = @DateTime.Now.ToShortDateString() })
-                @*@Html.TextBoxFor(x => x.ApplicationUser, new { htmlAttributes = new { @class = "form-control" } })*@
-            </div>
-        </div>
-<<<<<<< HEAD
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-<<<<<<< HEAD
-            <input type="submit" id="btnSubmit" value="Submit Quiz" class="btn btn-default" />
-=======
-            <input type="submit" id="btnSubmit" value="Submit Quiz" class="btn btn-default"/>
-=======
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" id="btnSubmit" value="Create" class="btn btn-default" />
-            </div>
->>>>>>> 20a05f9f41833ef193ab345e2cff79b1efe5332b
->>>>>>> 35fa59b521acabfeb09d89287964d12bd68647a6
-        </div>
-    </div>
+    <input type="hidden" name="Visual" value="" />
+    <input type="hidden" name="Auditory" value="" />
+    <input type="hidden" name="Kinetic" value="" />
 }
 
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+@*<p id="visualResult"></p>
+<p id="auditoryResult"></p>
+<p id="kineticResult"></p>*@

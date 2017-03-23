@@ -22,8 +22,7 @@ namespace Learn2Learn.Models
         public string UserId { get; set; }
         //navigation property- how to access related author in code
         public virtual ApplicationUser ApplicationUser { get; set; }
-
-
+        //public string UserVAK { get; set; }
 
     }
 }
