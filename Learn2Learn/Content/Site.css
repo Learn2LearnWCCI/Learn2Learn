@@ -2,10 +2,12 @@
     font-family: 'BondoluoPeek';
     src: url('../BondoluoPeek.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'DK Cool Crayon';
     src: url('../fonts/DK Cool Crayon.ttf') format('truetype');
 }
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -22,20 +24,25 @@ body {
 /*Navbar*/
 .brand img {
     background-color: #333333;
+    margin-left: 37px;
 }
+
 .brand {
     text-align: left;
 }
+
 .icon-bar {
     background-color: black;
 }
- #flip {
-     /*background-color: #EBEBEB;*/
-     background-color: rgba(235, 235,235, 0.5);
- }
+
+#flip {
+    /*background-color: #EBEBEB;*/
+    background-color: rgba(235, 235,235, 0.5);
+}
+
 .navbar-nav {
     float: none;
-  text-align: center;
+    text-align: center;
     /*float: none;
     margin: 0 auto;
     display: block;
@@ -51,13 +58,15 @@ body {
     float: none;
     display: inline-block;
 }
+
 .pane {
-    margin-top:5px;
+    margin-top: 5px;
     background-color: transparent;
     display: none;
     text-align: center;
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -114,9 +123,11 @@ label {
     font-family: 'News Cycle', sans-serif;
     font-size: 18px;
 }
-.orangefont{
+
+.orangefont {
     color: #F89E42;
 }
+
 .bluefont {
     color: #18B3A6;
 }
@@ -124,9 +135,27 @@ label {
 .bold {
     font-weight: bold;
 }
+
 .menu span {
     font-weight: 600;
+    font-size: 28px;
 }
+
 .menu {
-        text-align: center;
+    text-align: center;
+    margin-top: 9px;
+}
+.menu:hover span {
+    font-size: 35px;
+}
+
+footer {
+    font-family: 'News Cycle', sans-serif;
+    margin-top: 200px;
+}
+
+.login li a {
+    font-family: 'News Cycle', sans-serif;
+    font-size: 15px;
+    right: 130px;
 }

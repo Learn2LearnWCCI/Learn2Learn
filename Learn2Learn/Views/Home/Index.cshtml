@@ -9,10 +9,10 @@
 
 
 <div class="row homebuttons ">
-    <div class="col-md-6 col-sm-12">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10">
         @Html.ActionLink("Take Assessment", "Create", "Results",null, new { @class = "btn thn-default leftBtn" })       
     </div>
-    <div class="img-responsive">
+    <div class="hidden-md hidden-sm hidden-xs">
         <ul class="fly-in-text hidden">
             <li>W</li>
             <li>E</li>
@@ -24,7 +24,7 @@
         </ul>
     </div>
 
-    <div class="col-md-6 col-sm-12 text-right">
+    <div class="col-lg-6 col-md-6 text-right col-sm-6 col-xs-10">
         @Html.ActionLink("View Resources", "Resources", "Home" ,null, new { @class = "btn thn-default rightBtn" })
     </div>
 </div>

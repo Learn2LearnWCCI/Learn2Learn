@@ -32,9 +32,11 @@ function initialize() {
     $("#myModal").modal("show");
 
     $("#flip").hover(function () {
-        $(".pane").slideToggle("slow");
+        $(".pane").slideDown("slow");
     });
-
+    $(".pane").mouseleave(function () {
+        $(this).slideUp("slow");
+    });
     $("input").on("click",
         function () {
             $(".next").prop("disabled", false);

@@ -1097,7 +1097,9 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #337ab7;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
   text-decoration: none;
 }
 a:hover,
@@ -3555,7 +3557,7 @@ tbody.collapse.in {
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
-  color: #333;
+    color: #333;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,

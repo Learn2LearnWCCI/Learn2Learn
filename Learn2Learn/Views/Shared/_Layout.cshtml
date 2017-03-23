@@ -13,34 +13,38 @@
     <div class="container">
         <div class="navbar navbar-fixed-top" id="flip">
             <div class="row">
+                <div class="col-md-2 text-center">
                     <a class="brand" href="~/home">
                         <img src="~/Content/images/L2L Brand.png" width="30" height="50" alt="Learn2Learn" />
                     </a>
-                    <h2 class="menu">
-                        <span>Menu</span>
-                    </h2>
+                </div>
+                <div class="col-md-8 menu">
+                    <span>Menu</span>
+                </div>
+                <div class="col-md-2 text-center">@Html.Partial("_LoginPartial")</div>
             </div>
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav pane">
-                    <li>@Html.ActionLink("Assessment", "Create", "Results")</li>
-                    <li>@Html.ActionLink("Resources", "Resources", "Home")</li>
-                    <li>@Html.ActionLink("MyProfile", "Index", "Results")</li>
-                    <li>@Html.Partial("_LoginPartial")</li>
-                </ul>
-            </div>
+        </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse pane">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse pane collapse">
+            <ul class="nav navbar-nav pane">
+                <li>@Html.ActionLink("Assessment", "Create", "Results")</li>
+                <li>@Html.ActionLink("Resources", "Resources", "Home")</li>
+                <li>@Html.ActionLink("MyProfile", "Index", "Results")</li>
+            </ul>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
-
     </div>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Learn2Learn- Creative Commons Copywrite</p>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
