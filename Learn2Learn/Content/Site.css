@@ -157,5 +157,6 @@ footer {
 .login li a {
     font-family: 'News Cycle', sans-serif;
     font-size: 15px;
+    color: #333;
     right: 130px;
 }

@@ -1,4 +1,6 @@
-﻿@using System.Runtime.InteropServices.ComTypes
+﻿@using System
+@using System.Linq
+@using System.Runtime.InteropServices.ComTypes
 @using Microsoft.AspNet.Identity.EntityFramework
 
 @model IEnumerable<Learn2Learn.Models.Results>
@@ -7,29 +9,57 @@
 @{
     ViewBag.Title = "Results";
 }
+
+<link href="~/Content/ProfilePage.css" rel="stylesheet" />
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
 
-<h2>Profile</h2>
-<p>
-    @Html.ActionLink("Take Asessment Again", "Create")
-</p>
+    function drawChart() {
+        $(".row").each(function () {
+            var data = google.visualization.arrayToDataTable([
+                ['Styles', 'Scores'],
+                ['Visual', parseInt($(this).find('input[name="item.VisualResult"]').val())],
+                ['Auditory', parseInt($(this).find('input[name="item.AuditoryResult"]').val())],
+                ['Kinesthetic', parseInt($(this).find('input[name="item.KinestheticResult"]').val())]
+            ]);
 
+            var options = {
+                title: 'Assessment Results'
+            };
+
+            var chart = new google.visualization.PieChart($(this).find('.piechart')[0]);
+
+            chart.draw(data, options);
+        });
+    };
+</script>
 <div class="container">
+    <div class="well" id="profileHeading">
+        <h2>My Learning Style</h2>
+        @Html.ActionLink("Take Assessment", "Create", null, new { @class = "assessmentLink" })
+    </div>
 
     @foreach (var item in Model)
     {
         <div class="row well results">
             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-                <div class="piechart img-responsive" style="width: 900px; height: 500px;"></div>
-                @*@Html.DisplayNameFor(model => model.AuditoryResult):*@ @Html.HiddenFor(modelItem => item.AuditoryResult, new { id = String.Empty })<br />
-                @*@Html.DisplayNameFor(model => model.VisualResult):*@ @Html.HiddenFor(modelItem => item.VisualResult, new { id = String.Empty })<br />
-                @*@Html.DisplayNameFor(model => model.KinestheticResult):*@ @Html.HiddenFor(modelItem => item.KinestheticResult, new { id = String.Empty })<br />
+                <div class="piechart"></div>
+                @Html.HiddenFor(modelItem => item.AuditoryResult, new { id = String.Empty })<br />
+                @Html.HiddenFor(modelItem => item.VisualResult, new { id = String.Empty })<br />
+                @Html.HiddenFor(modelItem => item.KinestheticResult, new { id = String.Empty })<br />
                 @Html.DisplayNameFor(model => model.Date): @Html.DisplayFor(modelItem => item.Date)<br />
-                @Html.DisplayNameFor(model => model.ApplicationUser.FirstName): @Html.DisplayFor(modelItem => item.ApplicationUser.FirstName)<br />
-                @Html.DisplayNameFor(model => model.ApplicationUser.LastName): @Html.DisplayFor(modelItem => item.ApplicationUser.LastName)<br />
+                <p>
+                    Name:
+                    @Html.DisplayFor(modelItem => item.ApplicationUser.FirstName)
+                    @Html.DisplayFor(modelItem => item.ApplicationUser.LastName)
+                </p>
                 @*@Html.ActionLink("Edit", "Edit", new { id=item.ID }) | not allowing edit*@
-                @Html.ActionLink("Details", "Details", new { id = item.ID })
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                @*@Html.ActionLink("Details", "Details", new { id = item.ID })*@
+                @*@Html.ActionLink("Delete Result", "Delete", new { id = item.ID }, new { @class = "btn btn-primary" })*@
             </div>
 
             @{
@@ -40,50 +70,26 @@
             @if (valueIndex == 0)
             {
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 summary vissummary">
-                    <img class="img-responsive" src="~/Content/images/rsz_auditoryimg.png" />
-                    @*<h3>Primarily Auditory</h3>
-                        Your primary learning perference is visual!
-                        So what does this mean?
-                        Summary: An auditory learner uses verbal lessons, conversations, and listening to
-                        learn. Things such as tone of voice, speed, and pitch help them interpret and underst
-                        information. Written information won't likely be understood until it is heard outloud.
-                        Reading outloud and listening to recordings are a good way to learn.
-                        You probably: Prefer to work in groups, like to discuss ideas, recite information to remember it, repeat back instructions.
-                        You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.*@
-                    <br />  @Html.ActionLink("Auditory Portal", "AuditoryPortal", "Home", null, new { @class = "btn btn-primary" })
+                    <img class="img-responsive" src="~/Content/images/auditoryStyle.png" />
+                    <br /> @Html.ActionLink("Auditory Portal", "AuditoryPortal", "Home", null, new { @class = "btn btn-primary portalButton" })
                 </div>
             }
             @if (valueIndex == 1)
-                {
+            {
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 summary vissummary">
-                    <img class="img-responsive" src="~/Content/images/rsz_visualimage.png" />
-                    @*
-                        <h3>Primarily Visual</h3>
-                        Your primary learning perference is visual!
-                        So what does this mean?
-                        Summary: A visual learner needs to see body language and facial
-                        expressions of the teacher in order to understand the content.
-                        Visual learners may think of thinks in terms of pictures and learn best
-                        from visual displays such as diagrams. Details notes tend to help visual learns absorb information.
-                        You probably: Highlighter or color coordinate text, prefer audio books, and often use glossarys and chapter summaries to learn.*@
-                    <br /> @Html.ActionLink("Visual Portal", "VisualPortal", "Home", null, new { @class = "btn btn-primary" })
+                    <img class="img-responsive" src="~/Content/images/visualStyle.png" />
+                    <br /> @Html.ActionLink("Visual Portal", "VisualPortal", "Home", null, new { @class = "btn btn-primary portalButton" })
                 </div>
             }
             @if (valueIndex == 2)
             {
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 summary kinsummary">
-                    <img class="img-responsive" src="~/Content/images/rsz_1kinimage.png" />
-                    @*<h3>Primarily Kinesthetic</h3>
-                        Your primary learning perference is visual!
-                        So what does this mean?
-                        Summary: Kinesthetic learners learn through doing, touching, and movement. A
-                        kinesthetic learner will take a hands-on approach, actively exploring the physical world.
-                        Kinesthetic learners often have trouble sitting for long periods of time and can become distracted
-                        by their need for exploration.
-                        You probably: Take frequent breaks, prefer to work standing, listen to music while studying, skim material to get a rough idea, and likes to have an object or learning prop.*@
-                    <br />@Html.ActionLink("Kinesthetic Portal", "KinPortal", "Home", null, new { @class = "btn btn-primary" })
+                    <img class="img-responsive" src="~/Content/images/kinestheticStyle.png" />
+                    <br />@Html.ActionLink("Kinesthetic Portal", "KinPortal", "Home", null, new { @class = "btn btn-primary portalButton" })
                 </div>
             }
         </div>
+
                 }
+
 </div>

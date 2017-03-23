@@ -252,6 +252,7 @@
     <Content Include="Content\Home.css" />
     <Content Include="Content\images\3types.jpg" />
     <Content Include="Content\images\Brain Gears.png" />
+    <Content Include="Content\images\chalkboard.jpg" />
     <Content Include="Content\images\L2L Brand.png" />
     <Content Include="Content\images\L2L Text w BG.png" />
     <Content Include="Content\images\rsz_1kinimage.png" />
@@ -262,6 +263,7 @@
     <Content Include="Content\images\typing-690856_1920.jpg" />
     <Content Include="Content\images\VAKLearningStyles circle.jpg" />
     <Content Include="Content\navbar-fixed-side.css" />
+    <Content Include="Content\ProfilePage.css" />
     <Content Include="Content\Resources.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
