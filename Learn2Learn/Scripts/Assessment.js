@@ -93,24 +93,24 @@ assessmentResults.enableSubmit = function () {
 
 };
 
-google.charts.load('current', { 'packages': ['corechart'] });
-google.charts.setOnLoadCallback(drawChart);
+    google.charts.load("current", { "packages": ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart);
 
-function drawChart() {
-    $(".row").each(function () {
-        var data = google.visualization.arrayToDataTable([
-            ['Styles', 'Scores'],
-            ['Visual', parseInt($(this).find('input[name="item.VisualResult"]').val())],
-            ['Auditory', parseInt($(this).find('input[name="item.AuditoryResult"]').val())],
-            ['Kinesthetic', parseInt($(this).find('input[name="item.KinestheticResult"]').val())]
-        ]);
+    function drawChart() {
+        $(".row").each(function() {
+            var data = google.visualization.arrayToDataTable([
+                ['Styles', 'Scores'],
+                ['Visual', parseInt($(this).find('input[name="item.VisualResult"]').val())],
+                ['Auditory', parseInt($(this).find('input[name="item.AuditoryResult"]').val())],
+                ['Kinesthetic', parseInt($(this).find('input[name="item.KinestheticResult"]').val())]
+            ]);
 
-        var options = {
-            title: 'Assessment Results'
-        };
+            var options = {
+                title: "Assessment Results"
+            };
 
-        var chart = new google.visualization.PieChart($(this).find('.piechart')[0]);
+            var chart = new google.visualization.PieChart($(this).find(".piechart")[0]);
 
-        chart.draw(data, options);
-    });
-};//end of initialize function 
+            chart.draw(data, options);
+        });
+    };
